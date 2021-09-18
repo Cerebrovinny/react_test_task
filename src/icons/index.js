@@ -3,6 +3,8 @@ import {plus} from 'react-icons-kit/feather/plus';
 
 export const ShowIcons = () => {
     return (
-        <div><Icon icon={plus} /></div>
+        <div>
+            <Icon size={'10%'} icon={plus} />
+        </div>
     )
 }

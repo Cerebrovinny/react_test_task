@@ -4,7 +4,15 @@ import { createEditor } from 'slate';
 import { Slate, Editable, withReact } from 'slate-react';
 import { ShowIcons } from './icons';
 
-const AddText = () => <p>texttttttt</p>
+const EDITOR_STYLE = {
+  border: "1px solid #ccc",
+  borderRadius: "3px",
+  marginBottom: "5px",
+  padding: "5px",
+  fontSize: "16px",
+  fontFamily: "sans-serif",
+  width: "250px"
+};
 
 const App = () => {
       const [editor] = useState(createEditor());
@@ -26,7 +34,7 @@ const App = () => {
           onChange={newValue => setValue(newValue)}
         >
           <button onClick={() => setCount(count + 1)}><ShowIcons></ShowIcons></button>
-          { [...Array(count)].map((_, i) => <Editable key={i} />) }
+          { [...Array(count)].map((_, i) => <Editable style={EDITOR_STYLE} key={i} />) }
 
         </Slate>
         </React.Fragment>
